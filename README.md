@@ -6,7 +6,8 @@
 # config.yaml
 Params:
   snipcart:
-    key: # your public API key
+    enabled: true # defaults to true
+    key: # your public API key. 
     side: true # or false for full screen cart
     bootstrap: true # enables snipcart z-index css for bootstrap compatibility 
 ```

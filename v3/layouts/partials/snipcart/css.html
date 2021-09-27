@@ -1,4 +1,4 @@
-{{ if .Site.Params.snipcart.key -}}
+{{ if ne .Site.Params.snipcart.enabled false -}}
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
 {{ if site.Params.snipcart.bootstrap -}}
 {{- /* 

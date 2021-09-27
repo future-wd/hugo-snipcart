@@ -1,7 +1,7 @@
-{{- with .Site.Params.snipcart.key -}}
+{{ if ne .Site.Params.snipcart.enabled false -}}
 <script async src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
 <div hidden id="snipcart" 
-data-api-key="{{- . -}}"
+data-api-key="{{- .Site.Params.snipcart.key -}}"
 {{ if site.Params.snipcart.side -}}
 data-config-modal-style="side"  
 {{- end -}}
