@@ -2,12 +2,12 @@
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
 {{ if site.Params.snipcart.bootstrap -}}
 {{- /* 
-  * matches bootstrap modal z index 
-  * otherwise bootstrap nav-bar will be on top of snipcart
+  * matches bootstrap offcanvas z-index 
+  * otherwise bootstrap nav-bar will be on top of snipcart offcanvas nav
   */ -}}
 <style>
   .snipcart-modal__container {
-    z-index: 1060;
+    z-index: 1050;
   }
 </style>
 {{- end -}}
