@@ -1,5 +1,5 @@
 {{ if ne .Site.Params.snipcart.enabled false -}}
-<script defer src="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.js"></script>
+<script defer src={{ printf "https://cdn.snipcart.com/themes/%s/default/snipcart.js" .Params.snipcart.version }}"></script>
 <div hidden id="snipcart" 
 data-api-key="{{- .Site.Params.snipcart.key -}}"
 {{ if site.Params.snipcart.side -}}
