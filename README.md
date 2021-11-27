@@ -22,16 +22,16 @@ module:
 ```
 
 ```HTML
-<!-- baseof.html -->
+<!-- baseof.html  the js is deferred so it can be called in the head for faster load -->
 <html>
   <head>
     {{ partialCached "snipcart/hints" . }}
     {{ partialCached "snipcart/css" . }}
+    {{ partialCached "snipcart/js" . }}
     <title>...</title>
   </head>
   <body>
     ...
-    {{ partialCached "snipcart/js" . }}
   </body>
 </html>
 ```
