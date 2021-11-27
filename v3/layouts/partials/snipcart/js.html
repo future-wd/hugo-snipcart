@@ -1,5 +1,11 @@
 {{ if ne .Site.Params.snipcart.enabled false -}}
-<script defer src={{ printf "https://cdn.snipcart.com/themes/%s/default/snipcart.js" .Params.snipcart.version }}"></script>
+{{ if not .Site.Params.snipcart.version }}
+ {{ errorf "You have not passed the dot context to the snipcart js partial" }}
+{{ end }}
+{{ if not .Site.Params.snipcart.key }}
+ {{ errorf "You must configure a snipcart public key" }}
+{{ end }}
+<script defer src="{{ printf "https://cdn.snipcart.com/themes/v%v/default/snipcart.js" .Site.Params.snipcart.version }}"></script>
 <div hidden id="snipcart" 
 data-api-key="{{- .Site.Params.snipcart.key -}}"
 {{ if site.Params.snipcart.side -}}
