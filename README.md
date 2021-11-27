@@ -21,7 +21,6 @@ module:
   - path: github.com/future-wd/hugo-snipcart/v3
 ```
 
-
 ```HTML
 <!-- baseof.html -->
 <html>
