@@ -21,7 +21,6 @@ module:
   - path: github.com/future-wd/hugo-snipcart/v3
 ```
 
-
 ```HTML
 <!-- baseof.html  the js is deferred so it can be called in the head for faster load -->
 <html>
